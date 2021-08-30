@@ -8,7 +8,7 @@
 <div align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </div>
 
 
-### First Semester
+# First Semester
 
 ## Plan (September 8th)
 * [Plan](google.com)
@@ -30,29 +30,29 @@
 * [Progress Evaluation](google.com)
 
 
-## Second Semester
+# Second Semester
 
-### Plan (January 20th)
+## Plan (January 20th)
 * [Plan](google.com)
 * [Presentation](google.com)
 
-### Milestone 4 (February 15th)
+## Milestone 4 (February 15th)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
-### Milestone 5 (March 15th)
+## Milestone 5 (March 15th)
 * [Poster](google.com)
 * [e-book page](google.com)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
-### Milestone 6 (April 21st)
+## Milestone 6 (April 21st)
 * [User and/or Developer Manual](google.com)
 * [Demo Video](google.com)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
-<h3 align="left"> Website Maintenance </h3>
+### Website Maintenance
 You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 
