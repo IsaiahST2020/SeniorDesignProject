@@ -12,45 +12,45 @@ You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignP
 ## First Semester
 
 ### Plan (September 8th)
--[Plan](google.com)
--[Presentation](google.com)
+* [Plan](google.com)
+* [Presentation](google.com)
 
 ### Milestone 1 (October 4th)
--[Requirement](google.com)
--[Design](google.com)
--[Test](google.com)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [Requirement](google.com)
+* [Design](google.com)
+* [Test](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ### Milestone 2 (November 1st)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ### Milestone 3 (November 29th)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ## Second Semester
 
 ### Plan (January 20th)
--[Plan](google.com)
--[Presentation](google.com)
+* [Plan](google.com)
+* [Presentation](google.com)
 
 ### Milestone 4 (February 15th)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ### Milestone 5 (March 15th)
--[Poster](google.com)
--[e-book page](google.com)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [Poster](google.com)
+* [e-book page](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ### Milestone 6 (April 21st)
--[User and/or Developer Manual](google.com)
--[Demo Video](google.com)
--[Presentation](google.com)
--[Progress Evaluation](google.com)
+* [User and/or Developer Manual](google.com)
+* [Demo Video](google.com)
+* [Presentation](google.com)
+* [Progress Evaluation](google.com)
 
 ### Markdown
 
