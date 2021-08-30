@@ -8,24 +8,24 @@
 <div align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </div>
 
 
-## First Semester
+### First Semester
 
-### Plan (September 8th)
+## Plan (September 8th)
 * [Plan](google.com)
 * [Presentation](google.com)
 
-### Milestone 1 (October 4th)
+## Milestone 1 (October 4th)
 * [Requirement](google.com)
 * [Design](google.com)
 * [Test](google.com)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
-### Milestone 2 (November 1st)
+## Milestone 2 (November 1st)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
-### Milestone 3 (November 29th)
+## Milestone 3 (November 29th)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
