@@ -1,4 +1,4 @@
-<div align="center">## Project {Name} </div>
+<h1 align="center"> Project {Name} </1>
 ##<div align="center"> Team Members </div>
 ##<div align="center"> Carl Mann : cmann2013@my.fit.edu </div>
 ##<div align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </div>
