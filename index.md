@@ -1,11 +1,11 @@
 <h1 align="center"> Project {Name} </h1>
 <h2 align="center"> Team Members </h2>
-<h3 align="center"> Carl Mann : cmann2013@my.fit.edu </h3>
-<h3 align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </h3>
-<h3 align="center"> Tiffanie Petersen : tpetersen2018@my.fit.edu </h3>
-<h3 align="center"> Isaiah Thomas : ithomas2018@my.fit.edu </h3>
+<div align="center"> Carl Mann : cmann2013@my.fit.edu </div>
+<div align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </div>
+<div align="center"> Tiffanie Petersen : tpetersen2018@my.fit.edu </div>
+<div align="center"> Isaiah Thomas : ithomas2018@my.fit.edu </div>
 <h2 align="center"> Faculty Advisor </h2>
-<h3 align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </h3>
+<div align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </div>
 
 
 ## First Semester
