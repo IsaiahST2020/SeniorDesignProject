@@ -7,8 +7,6 @@
 <h2 align="center"> Faculty Advisor </h2>
 <h3 align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </h3>
 
-You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
 ## First Semester
 
 ### Plan (September 8th)
@@ -51,6 +49,9 @@ You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignP
 * [Demo Video](google.com)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
+
+<h3 align="left"> Website Maintenance </h3>
+- You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 ### Markdown
 
