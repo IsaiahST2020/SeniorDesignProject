@@ -1,11 +1,11 @@
-<h1 align="center"> Project {Name} </1>
-##<div align="center"> Team Members </div>
-##<div align="center"> Carl Mann : cmann2013@my.fit.edu </div>
-##<div align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </div>
-##<div align="center"> Tiffanie Petersen : tpetersen2018@my.fit.edu </div>
-##<div align="center"> Isaiah Thomas : ithomas2018@my.fit.edu </div>
-##<div align="center"> Faculty Advisor </div>
-##<div align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </div>
+<h1 align="center"> Project {Name} </h1>
+<h2 align="center"> Team Members </h2>
+<h3 align="center"> Carl Mann : cmann2013@my.fit.edu </h3>
+<h3 align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </h3>
+<h3 align="center"> Tiffanie Petersen : tpetersen2018@my.fit.edu </h3>
+<h3 align="center"> Isaiah Thomas : ithomas2018@my.fit.edu </h3>
+<h2 align="center"> Faculty Advisor </h2>
+<h3 align="center"> Sid Bhattacharyya : sbhattacharyya@fit.edu </h3>
 
 You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
