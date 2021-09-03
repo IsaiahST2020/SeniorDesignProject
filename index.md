@@ -11,7 +11,7 @@
 # First Semester
 
 ## Plan (September 8th)
-* [Plan](<blob/gh-pages/Senior Design Project Plan.pdf>)
+* [Plan](<Senior Design Project Plan.pdf>)
 * [Presentation](google.com)
 
 ## Milestone 1 (October 4th)
