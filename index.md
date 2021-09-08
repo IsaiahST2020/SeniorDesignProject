@@ -12,7 +12,7 @@
 
 ## Plan (September 8th)
 * [Plan](<Senior Design Project Plan.pdf>)
-* [Presentation](Project Plan Presentation.pdf)
+* [Presentation](<Project Plan Presentation.pdf>)
 
 ## Milestone 1 (October 4th)
 * [Requirement](google.com)
