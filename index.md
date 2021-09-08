@@ -1,4 +1,4 @@
-<h1 align="center"> Project {Name} </h1>
+<h1 align="center"> Secure and Remote 3D Printing </h1>
 <h2 align="center"> Team Members </h2>
 <div align="center"> Carl Mann : cmann2013@my.fit.edu </div>
 <div align="center"> Nick Cottrell : ncottrell2019@my.fit.edu </div>
