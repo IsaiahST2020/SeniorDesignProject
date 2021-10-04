@@ -18,7 +18,7 @@
 * [Requirement](google.com)
 * [Design](<Design Document.pdf>)
 * [Test](<Test Plan.pdf>)
-* [Presentation](google.com)
+* [Presentation](<Milestone #1.pdf>)
 * [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
 
 ## Milestone 2 (November 1st)
