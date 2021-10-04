@@ -15,7 +15,7 @@
 * [Presentation](<Project Plan Presentation.pdf>)
 
 ## Milestone 1 (October 4th)
-* [Requirement](google.com)
+* [Requirement](<Requirement Document.pdf>)
 * [Design](<Design Document.pdf>)
 * [Test](<Test Plan.pdf>)
 * [Presentation](<Milestone #1.pdf>)
