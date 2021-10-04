@@ -19,7 +19,7 @@
 * [Design](google.com)
 * [Test](google.com)
 * [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
 
 ## Milestone 2 (November 1st)
 * [Presentation](google.com)
