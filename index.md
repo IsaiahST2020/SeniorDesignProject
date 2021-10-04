@@ -16,7 +16,7 @@
 
 ## Milestone 1 (October 4th)
 * [Requirement](google.com)
-* [Design](google.com)
+* [Design](<Design Document.pdf>)
 * [Test](<Test Plan.pdf>)
 * [Presentation](google.com)
 * [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
