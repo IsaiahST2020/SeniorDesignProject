@@ -18,7 +18,7 @@
 * [Requirement](<Requirement Document.pdf>)
 * [Design](<Design Document.pdf>)
 * [Test](<Test Plan.pdf>)
-* [Presentation](<Milestone1Presentation.pdf>)
+* [Presentation](<Milestone1PowerPoint.pdf>)
 * [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
 
 ## Milestone 2 (November 1st)
