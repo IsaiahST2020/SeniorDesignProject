@@ -42,5 +42,6 @@ pipenv run runserver
 ```
 or
 ```bash
-pipenv shell
+pipenv shell 
+(exit) to leave shell
 ```
