@@ -13,6 +13,9 @@ RUN pip install -r /app/requirements.txt
 # Copying over files
 COPY . .
 
+# Mounting spaces with data we prefer to keep
+VOLUME [ "/app/data", "/app/uploads" ]
+
 # Exposing port
 EXPOSE 8000
 
