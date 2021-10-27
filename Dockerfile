@@ -1,6 +1,7 @@
 # syntax=docker/dockerfile:1
 
 FROM python:3.9.7-slim-buster
+ENV PYTHONUNBUFFERED=1
 
 # The directory for our code will be in /app
 WORKDIR /app
@@ -12,7 +13,6 @@ RUN pip install -r /app/requirements.txt
 # Copying over files
 COPY . .
 
-ENV PYTHONUNBUFFERED=1
 # Exposing port
 EXPOSE 8000
 
