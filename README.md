@@ -7,12 +7,6 @@
 >-Enter command in repo<br/>
 >git remote set-url origin git@github.com:IsaiahST2020/SeniorDesignProject.git<br/>
 
->Steps for setup:<br/>
->source bin/activate<br/>
->cd src<br/>
->python manage.py runserver<br/>
->deactivate <br/>
-
 ## Setup with pipenv
 To have this environment run as smoothly as possible, you can run the following commands to get a working setup for production or development
 
