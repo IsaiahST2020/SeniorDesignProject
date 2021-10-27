@@ -15,7 +15,7 @@ to get all the dependencies independant of the system, you will need to install 
 
 debian/ubuntu:
 ```bash
-sudo apt install python3-pipenv
+sudo apt install pipenv
 ```
 every other system
 ```bash
@@ -39,4 +39,9 @@ pipenv run python manage.py runserver
 or
 ```bash
 pipenv run runserver
+```
+or
+```bash
+pipenv shell 
+exit (to leave shell)
 ```
