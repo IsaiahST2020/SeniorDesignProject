@@ -14,4 +14,4 @@ autopep8 = "*"
 python_version = "3.9"
 
 [scripts]
-runserver = "python src/manage.py runserver"
+runserver = "python manage.py runserver"
