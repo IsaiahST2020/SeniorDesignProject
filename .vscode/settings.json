@@ -1,5 +1,6 @@
 {
     /* General settings for all languages and files */
+    "files.encoding": "utf8",
     "diffEditor.ignoreTrimWhitespace": true,
     "editor.comments.insertSpace": true,
     "editor.detectIndentation": false,
@@ -10,6 +11,7 @@
     "editor.useTabStops": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
+    "editor.unusualLineTerminators": "auto",
     "[diff]": {
         "editor.detectIndentation": true,
         "editor.trimAutoWhitespace": false,
@@ -47,5 +49,43 @@
     "python.linting.ignorePatterns": [
         ".vscode/*.py",
         "**/site-packages/**/*.py",
-    ]
+    ],
+    /* CSS */
+    "css.completion.completePropertyWithSemicolon": true,
+    "css.completion.triggerPropertyValueCompletion": true,
+    "css.lint.duplicateProperties": "warning",
+    "css.lint.emptyRules": "warning",
+    "css.lint.hexColorLength": "warning",
+    "css.lint.fontFaceProperties": "warning",
+    "css.lint.float": "ignore",
+    "css.lint.idSelector": "ignore",
+    "css.validate": true,
+    /* HTML */
+    "html.format.enable": true,
+    "html.format.endWithNewline": false,
+    "html.format.indentHandlebars": true,
+    "html.format.indentInnerHtml": true,
+    "html.suggest.html5": true,
+    "html.validate.scripts": true,
+    "html.validate.styles": true,
+    /* JavaScript */
+    "javascript.format.insertSpaceAfterCommaDelimiter": true,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": false,
+    "javascript.format.semicolons": "insert",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifierEnding": "js",
+    "javascript.preferences.quoteStyle": "double",
+    "javascript.preferences.useAliasesForRenames": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "js/ts.implicitProjectConfig.experimentalDecorators": true,
+    "js/ts.implicitProjectConfig.strictFunctionTypes": true,
+    "typescript.format.semicolons": "insert"
 }
