@@ -40,3 +40,7 @@ or
 ```bash
 pipenv run runserver
 ```
+or
+```bash
+pipenv shell
+```
