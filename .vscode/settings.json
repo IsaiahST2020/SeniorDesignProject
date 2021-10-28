@@ -8,10 +8,14 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "editor.trimAutoWhitespace": true,
+    "editor.unusualLineTerminators": "auto",
     "editor.useTabStops": true,
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
-    "editor.unusualLineTerminators": "auto",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true
+    },
     "[diff]": {
         "editor.detectIndentation": true,
         "editor.trimAutoWhitespace": false,
@@ -46,10 +50,6 @@
     "python.terminal.activateEnvironment": true,
     "python.terminal.executeInFileDir": true,
     "vsintellicode.python.completionsEnabled": true,
-    "python.linting.ignorePatterns": [
-        ".vscode/*.py",
-        "**/site-packages/**/*.py",
-    ],
     /* CSS */
     "css.completion.completePropertyWithSemicolon": true,
     "css.completion.triggerPropertyValueCompletion": true,
