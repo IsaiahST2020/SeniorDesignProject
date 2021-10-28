@@ -20,8 +20,8 @@ class UploadForm(forms.ModelForm):
 		cleaned_data = super(UploadForm, self).clean()
 		file = cleaned_data.get('file')
 
-		#if file:
-			## Need to check file type (.gcode)
+		if ".gcode" not in file:
+			raise forms.ValidationError("this is not a gcode file")
 
 
 class RawUploadForm(forms.Form):
