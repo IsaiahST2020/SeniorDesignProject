@@ -15,6 +15,12 @@ class UploadForm(forms.ModelForm):
 			return clean_title
 		else:
 			raise forms.ValidationError("this is not a valid title")
+	def clean_file_type(self, *args, **kwargs):
+		cleaned_data = super(UploadForm, self).clean()
+		file = cleaned_data.get('file')
+
+		if file:
+			## Need to check file type (.gcode)
 
 
 class RawUploadForm(forms.Form):
