@@ -4,7 +4,6 @@ from .models import Upload, FileUpload
 
 
 class UploadForm(forms.ModelForm):
-<<<<<<< HEAD
 	class Meta:
 		model = Upload
 		fields = [
@@ -21,23 +20,8 @@ class UploadForm(forms.ModelForm):
 		cleaned_data = super(UploadForm, self).clean()
 		file = cleaned_data.get('file')
 
-		if file:
+		#if file:
 			## Need to check file type (.gcode)
-=======
-    class Meta:
-        model = Upload
-        fields = [
-            'title',
-            'quantity'
-        ]
-
-    def clean_title(self, *args, **kwargs):
-        title = self.cleaned_data.get("title")
-        if "CFE" in title:
-            return clean_title
-        else:
-            raise forms.ValidationError("this is not a valid title")
->>>>>>> ba6412da8d3113db75b66d26cbb7c9242e95e263
 
 
 class RawUploadForm(forms.Form):
