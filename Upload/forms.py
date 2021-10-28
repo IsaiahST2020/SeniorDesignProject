@@ -22,6 +22,8 @@ class UploadForm(forms.ModelForm):
 
 		if ".gcode" not in file:
 			raise forms.ValidationError("this is not a gcode file")
+		else:
+			return file
 
 
 class RawUploadForm(forms.Form):
