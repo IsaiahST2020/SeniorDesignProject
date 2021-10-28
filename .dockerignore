@@ -1,0 +1,13 @@
+# Personal data ignore
+uploads
+db.sqlite3
+
+# Ignore python compile files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# ignore vscode settings
+.vscode
+workspace.sublime-project

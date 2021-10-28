@@ -2,7 +2,9 @@ from django import forms
 
 from .models import Upload, FileUpload
 
+
 class UploadForm(forms.ModelForm):
+<<<<<<< HEAD
 	class Meta:
 		model = Upload
 		fields = [
@@ -21,16 +23,31 @@ class UploadForm(forms.ModelForm):
 
 		if file:
 			## Need to check file type (.gcode)
+=======
+    class Meta:
+        model = Upload
+        fields = [
+            'title',
+            'quantity'
+        ]
+
+    def clean_title(self, *args, **kwargs):
+        title = self.cleaned_data.get("title")
+        if "CFE" in title:
+            return clean_title
+        else:
+            raise forms.ValidationError("this is not a valid title")
+>>>>>>> ba6412da8d3113db75b66d26cbb7c9242e95e263
 
 
 class RawUploadForm(forms.Form):
-	title = forms.CharField(required=True)
-	number = forms.CharField(label='')
-	date = forms.CharField()
-	quantity = forms.IntegerField(initial=1)
+    title = forms.CharField(required=True)
+    number = forms.CharField(label='')
+    date = forms.CharField()
+    quantity = forms.IntegerField(initial=1)
 
 
 class FileForm(forms.ModelForm):
-	class Meta:
-		model = FileUpload
-		fields = ('title', 'file', )
+    class Meta:
+        model = FileUpload
+        fields = ('title', 'file', )
