@@ -22,12 +22,12 @@
 * [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
 
 ## Milestone 2 (November 1st)
-* [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [Presentation](<Milestone_2_presentation.pdf>)
+* [Progress Evaluation](<Milestone2.pdf>)
 
 ## Milestone 3 (November 29th)
-* [Presentation](google.com)
-* [Progress Evaluation](<Milestone2.pdf>)
+* [Presentation](<Milestone_3_presentation.pdf>)
+* [Progress Evaluation](<Milestone3.pdf>)
 
 
 # Second Semester
