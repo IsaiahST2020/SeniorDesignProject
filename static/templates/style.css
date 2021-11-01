@@ -2,6 +2,10 @@ li a {
     color: blue;
 }
 
+body {
+    background: lightsteelblue;
+} 
+
 .page-header {
     background-color: #c25100;
     margin-top: 0;
@@ -21,7 +25,8 @@ h1,
 h2,
 h3,
 h4 {
-    font-family:  'Helvetica Nueu',  Helvetica;
+    font-family:  'Railway';
+    background-color: lightgray;
 }
 
 
@@ -51,3 +56,4 @@ h4 {
     color: #000000;
     background-color: #C25100;
 }
+
