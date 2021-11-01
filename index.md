@@ -27,7 +27,7 @@
 
 ## Milestone 3 (November 29th)
 * [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [Progress Evaluation](<Milestone2.pdf>)
 
 
 # Second Semester
