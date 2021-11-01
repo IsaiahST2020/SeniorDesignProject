@@ -4,7 +4,7 @@ li a {
 
 body {
     background: lightsteelblue;
-} 
+}
 
 .page-header {
     background-color: #c25100;
@@ -12,41 +12,30 @@ body {
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
 }
-.page-header h1,
-.page-header h1 a,
-.page-header h1 a:visited,
-.page-header h1 a:active {
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family:  'Railway';
+h1, h2, h3, h4 {
+    font-family: 'Railway';
     background-color: lightgray;
 }
 
-
-.post-form textarea,
-.post-form input {
+.post-form textarea, .post-form input {
     width: 100%;
 }
 
-.top-menu,
-.top-menu:hover,
-.top-menu:visited {
+.top-menu, .top-menu:hover, .top-menu:visited {
     color: #ff0000;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
 }
 
-
-.btn-default,
-.btn-default:visited {
+.btn-default, .btn-default:visited {
     color: #005100;
     background: none;
     border-color: #C25100;
@@ -56,4 +45,3 @@ h4 {
     color: #000000;
     background-color: #C25100;
 }
-

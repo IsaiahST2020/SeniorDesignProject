@@ -1,19 +1,39 @@
 {% load static %}
-
-<link rel="stylesheet" type="text/css" href="{% static 'templates/style.css' %}">
-
 <!doctype html>
-<html>
+<html lang="en">
 
-<head>
-    <title>Senior Design Project</title>
-</head>
+    <head>
+        <title>Senior Design Project</title>
+        <meta charset="utf-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{% static 'templates/css/bootstrap-style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'templates/css/style.css' %}" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
 
-<body>
-    {% include 'navbar.html' %}
-    {% block content %}
-    replace me
-    {% endblock %}
-</body>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-light">
+            <div class="container-fluid">
+                <!-- Navbar links -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/upload">Upload a file</a></li>
+                    </ul>
+                    <span class="navbar-text d-flex">Welcome {{ request.user}}</span>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        replace mex
+        {% endblock %}
+    </body>
 
 </html>
