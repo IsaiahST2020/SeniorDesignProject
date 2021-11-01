@@ -5,15 +5,15 @@ from .models import Upload, FileUpload
 
 class UploadForm(forms.ModelForm):
 	class Meta:
-		model = Upload
+		model = FileUpload
 		fields = [
 			'title',
-			'quantity'
+			'file'
 		]
 	def clean_title(self, *args, **kwargs):
-		title = self.cleaned_data.get("title")
-		if "CFE" in title:
-			return clean_title
+		cleaned_title = self.cleaned_data.get("title")
+		if "CFE" not in cleaned_title:
+			return cleaned_title
 		else:
 			raise forms.ValidationError("this is not a valid title")
 	def clean_file_type(self, *args, **kwargs):
