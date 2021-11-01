@@ -22,11 +22,11 @@
 * [Progress Evaluation](<Milestone Progress Evaluation.pdf>)
 
 ## Milestone 2 (November 1st)
-* [Presentation](<Milestone_2_presentation.pdf>)
+* [Presentation](<Milestone_2_Powerpoint.pdf>)
 * [Progress Evaluation](<Milestone2.pdf>)
 
 ## Milestone 3 (November 29th)
-* [Presentation](<Milestone_3_presentation.pdf>)
+* [Presentation](<Milestone_3_Powerpoint.pdf>)
 * [Progress Evaluation](<Milestone3.pdf>)
 
 
