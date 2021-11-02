@@ -6,6 +6,16 @@ header {
     background-color: #980000ff;
 }
 
+main {
+    background-color: #E8E8E8;
+    min-height: 100%;
+}
+
+footer {
+    background-color: #434343ff;
+    color: #d3d3d3;
+}
+
 .page-header {
     background-color: #c25100;
     margin-top: 0;
