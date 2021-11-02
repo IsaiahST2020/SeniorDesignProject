@@ -6,6 +6,7 @@
     "editor.detectIndentation": false,
     "editor.formatOnSave": true,
     "editor.insertSpaces": true,
+    "editor.linkedEditing": true,
     "editor.tabSize": 4,
     "editor.trimAutoWhitespace": true,
     "editor.unusualLineTerminators": "auto",
@@ -61,8 +62,10 @@
     "css.lint.idSelector": "ignore",
     "css.validate": true,
     /* HTML */
+    "html.autoClosingTags": true,
     "html.format.enable": true,
     "html.format.endWithNewline": false,
+    "html.format.extraLiners": "",
     "html.format.indentHandlebars": true,
     "html.format.indentInnerHtml": true,
     "html.suggest.html5": true,
