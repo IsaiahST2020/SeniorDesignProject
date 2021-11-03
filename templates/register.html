@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% block title %}Register{% endblock title %}
+{% block banner %}Registration Page{% endblock banner %}
+
 {% block content %}
 <br>
 <h3 style="text-align:left;"><b>Register</b></h3>
@@ -9,9 +12,9 @@
     {% csrf_token %}
     {{form.as_p}}
 
-    <button style="background:#b71c1c; color:white" class="btn 
+    <button style="background:#b71c1c; color:white" class="btn
     btn-outline-info" type="submit">Register</button>
 </form>
 
 If you already have an account <a href="/login" target="blank"><strong>login</strong></a> instead.
-{% endblock %}
+{% endblock content %}
