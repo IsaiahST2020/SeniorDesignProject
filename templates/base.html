@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Senior Design Project</title>
+        <title>Senior Design Project - {% block title %}Homepage{% endblock title %}</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{% static 'templates/libs/bootstrap/bootstrap5.1.2.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'templates/css/bootstrap-style.css' %}" />
@@ -18,7 +18,7 @@
                         src="{% static 'templates/images/florida-tech-logo.png' %}" />
                 </div>
                 <div class="col-sm-4 text-center d-flex">
-                    <h1 id="title" class="m-auto">Homepage</h1>
+                    <h1 id="title" class="m-auto">{% block banner %}Homepage{% endblock banner %}</h1>
                 </div>
                 <div class="col-sm-4">
                     <img class="img-fluid float-end rounded border border-3 border-dark" alt="3D printer image"
@@ -50,7 +50,7 @@
         <main class="pb-4 px-4">
             {% block content %}
             replace mex
-            {% endblock %}
+            {% endblock content %}
         </main>
         <footer class="text-center pt-5">
             <p>| <a href="/">Home</a> | <a href="/login">Login</a> | <a href="/register">Register</a> | <a
