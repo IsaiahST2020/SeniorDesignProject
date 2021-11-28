@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Date Uploaded</th>
+		<th>Size(bytes)</th>
+		<th>Download</th>
+	</tr>
+
+{% for download in object_list %}
+	<tr>
+		<td>{{ download.title }}</td>
+		<td>{{ download.upload_time }}</td>
+		<td>{{ download.file.size }}</td>
+		<td><a type="application/octet-stream" href="/uploads/{{ download.file }}" download>Click Me</a></td>
+	</tr>
+	<!--
+	<p>Click link to download</p>
+	<a type="application/octet-stream" href="/uploads/{{ file.file }}" download>{{ file.title }}</a>
+-->
+{% endfor %}
+</table>
+{% endblock %}
