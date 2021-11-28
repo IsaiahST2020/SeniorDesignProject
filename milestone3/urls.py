@@ -30,7 +30,8 @@ urlpatterns = [
     path('register/', register_view, name="register"),
     url(r"^accounts/", include("django.contrib.auth.urls")),
     path('upload/success/', success_view, name="success"),
-    path('queue/', queue_view, name="queue")
+    path('queue/', queue_view, name="queue"),
+    url(r"^delete_file/(?P<pk>[0-9]+)/$", delete_file, name="delete_file")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
@@ -108,7 +108,6 @@ def success_view(request, *args, **kwargs):
 
 
 # Create your views here.
-@login_required
 def queue_view(request, *args, **kwargs):
 	#queryset = FileUpload.objects.all()
 	if request.user.is_staff != True:
@@ -117,13 +116,27 @@ def queue_view(request, *args, **kwargs):
 	context = {
 		"object_list": queryset
 	}
-
+	if request.method == "POST":
+		print(request)
 	#obj = FileUpload.objects.get(id=1)
 	#context = {
 	#	'title': obj.title,
 	#	'file': obj.file
 	#}
 	return render(request, "upload/queue.html", context)
+
+
+def delete_file(request, pk):
+	# Ensure priviledged user
+	if request.user.is_staff != True:
+		raise Http404()
+	if request.method == 'POST':
+		file = get_object_or_404(FileUpload, pk=pk)
+		file.delete()
+		return redirect('/queue')
+	else:
+		raise Http404()
+
 
 
 # def upload_create_view(request):

@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.db import models
@@ -5,6 +6,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.core.validators import FileExtensionValidator
 from django.core.exceptions import ValidationError
+from django.dispatch import receiver
 
 
 class CustomUserManager(BaseUserManager):
@@ -73,3 +75,11 @@ class FileUpload(models.Model):
     title = models.CharField(max_length=64)
     upload_time = models.DateTimeField(auto_now_add=True, blank=True)
     file = models.FileField(upload_to="", validators=[file_size, FileExtensionValidator(allowed_extensions=['gcode'])])
+
+
+# When Django receives signal to delete a FileUpload object, this will be called and delete the file from the filesystem
+@receiver(models.signals.post_delete, sender=FileUpload)
+def remove_file(sender, instance, **kwargs):
+    if instance.file:
+        if os.path.isfile(instance.file.path):
+            os.remove(instance.file.path)

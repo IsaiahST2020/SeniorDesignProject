@@ -8,6 +8,7 @@
 		<th>Date Uploaded</th>
 		<th>Size(bytes)</th>
 		<th>Download</th>
+		<th>DeleteButton</th>
 	</tr>
 
 {% for download in object_list %}
@@ -16,6 +17,8 @@
 		<td>{{ download.upload_time }}</td>
 		<td>{{ download.file.size }}</td>
 		<td><a type="application/octet-stream" href="/uploads/{{ download.file }}" download>Click Me</a></td>
+		<!-- The following line will send a POST request to delete the file from the Queue -->
+		<td><form action="{% url 'delete_file' download.id %}" method="POST">{% csrf_token %}<input type="submit" value="Delete File"></form></td>
 	</tr>
 	<!--
 	<p>Click link to download</p>
