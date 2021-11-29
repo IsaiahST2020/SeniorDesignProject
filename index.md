@@ -28,6 +28,7 @@
 ## Milestone 3 (November 29th)
 * [Presentation](<Milestone_3_Powerpoint.pdf>)
 * [Progress Evaluation](<Milestone3.pdf>)
+* [New Diagrams](<Milestone3_diagrams.pdf>)
 
 
 # Second Semester
