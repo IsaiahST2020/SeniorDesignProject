@@ -15,6 +15,14 @@ class CustomUserCreationForm(UserCreationForm):
         for field in ['password1', 'password2']:
             self.fields[field].help_text = None
 
+    # Whitelist fit.edu and my.fit.edu e-mail domains only
+    def clean_email(self):
+        submitted_email = self.cleaned_data['email']
+        domain = submitted_email.split('@')[1]
+        if domain not in ['fit.edu', 'my.fit.edu']:
+            raise forms.ValidationError('Not a valid Florida Tech email')
+        return submitted_email
+
 
 class CustomUserChangeForm(UserChangeForm):
 
