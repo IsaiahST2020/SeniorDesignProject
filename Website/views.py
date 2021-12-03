@@ -93,7 +93,10 @@ def file_upload_view(request):
 	if request.method == 'POST':
 		form = FileForm(request.POST, request.FILES)
 		if form.is_valid():
-			form.save()
+			# Autofill the upload_by field for the File object
+			obj = form.save(commit=False)
+			obj.upload_by = request.user
+			obj.save()
 			return redirect('success/')
 
 	else:

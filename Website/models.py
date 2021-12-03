@@ -75,11 +75,13 @@ class FileUpload(models.Model):
     title = models.CharField(max_length=64)
     upload_time = models.DateTimeField(auto_now_add=True, blank=True)
     file = models.FileField(upload_to="", validators=[file_size, FileExtensionValidator(allowed_extensions=['gcode'])])
+    upload_by = models.EmailField(max_length=75, unique=False, default='test@my.fit.com')
 
 
 # When Django receives signal to delete a FileUpload object, this will be called and delete the file from the filesystem
 @receiver(models.signals.post_delete, sender=FileUpload)
 def remove_file(sender, instance, **kwargs):
     if instance.file:
+        # TODO: Once we take over from previous group, send out the file to the 3D printer for printing
         if os.path.isfile(instance.file.path):
             os.remove(instance.file.path)
