@@ -8,6 +8,23 @@ __pycache__
 *.pyo
 *.pyd
 
-# ignore vscode settings
+# ignore workspace settings
 .vscode
 workspace.sublime-project
+.editorconfig
+.nanorc
+
+# ignore pipfile settings
+Pipfile
+Pipfile.lock
+
+# ignore documentation
+README.md
+
+# ignore git files
+.git
+.gitignore
+
+# ignore docker files
+.dockerignore
+Dockerfile
