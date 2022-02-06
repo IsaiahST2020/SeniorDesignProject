@@ -1,7 +1,7 @@
 {
     /* General settings for all languages and files */
     "files.encoding": "utf8",
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.comments.insertSpace": true,
     "editor.detectIndentation": false,
     "editor.formatOnSave": true,
@@ -81,7 +81,7 @@
     "html.validate.styles": true,
     /* JavaScript */
     "javascript.format.insertSpaceAfterCommaDelimiter": true,
-    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
     "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": true,
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
     "javascript.format.insertSpaceAfterSemicolonInForStatements": true,
