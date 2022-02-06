@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'milestone3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'data' / 'db.sqlite3',
     }
 }
 
@@ -135,7 +135,7 @@ STATICFILES_DIRS = [
 STATIC_URL = 'static/'
 
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT=os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

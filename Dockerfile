@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.9.7-slim-buster
+FROM python:3.9-alpine
 ENV PYTHONUNBUFFERED=1
 
 # The directory for our code will be in /app
