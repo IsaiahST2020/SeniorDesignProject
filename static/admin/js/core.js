@@ -140,25 +140,25 @@ function findPosY(obj) {
         let day, month, year;
         while (i < split_format.length) {
             switch (split_format[i]) {
-            case "%d":
-                day = date[i];
-                break;
-            case "%m":
-                month = date[i] - 1;
-                break;
-            case "%Y":
-                year = date[i];
-                break;
-            case "%y":
-                // A %y value in the range of [00, 68] is in the current
-                // century, while [69, 99] is in the previous century,
-                // according to the Open Group Specification.
-                if (parseInt(date[i], 10) >= 69) {
+                case "%d":
+                    day = date[i];
+                    break;
+                case "%m":
+                    month = date[i] - 1;
+                    break;
+                case "%Y":
                     year = date[i];
-                } else {
-                    year = (new Date(Date.UTC(date[i], 0))).getUTCFullYear() + 100;
-                }
-                break;
+                    break;
+                case "%y":
+                    // A %y value in the range of [00, 68] is in the current
+                    // century, while [69, 99] is in the previous century,
+                    // according to the Open Group Specification.
+                    if (parseInt(date[i], 10) >= 69) {
+                        year = date[i];
+                    } else {
+                        year = (new Date(Date.UTC(date[i], 0))).getUTCFullYear() + 100;
+                    }
+                    break;
             }
             ++i;
         }

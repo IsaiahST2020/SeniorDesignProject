@@ -65,9 +65,9 @@
         const actions_icnt = Number(counter.dataset.actionsIcnt);
         counter.textContent = interpolate(
             ngettext('%(sel)s of %(cnt)s selected', '%(sel)s of %(cnt)s selected', sel), {
-                sel: sel,
-                cnt: actions_icnt
-            }, true);
+            sel: sel,
+            cnt: actions_icnt
+        }, true);
         const allToggle = document.getElementById(options.allToggleId);
         allToggle.checked = sel === actionCheckboxes.length;
         if (allToggle.checked) {

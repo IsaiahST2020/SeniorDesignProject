@@ -15,7 +15,9 @@
     width: 100%;
 }
 
-.change-list .hiddenfields { display:none; }
+.change-list .hiddenfields {
+    display: none;
+}
 
 .change-list .filtered table {
     border-right: none;
@@ -292,7 +294,8 @@
     width: 100%;
 }
 
-#changelist .actions.selected { /* XXX Probably unused? */
+#changelist .actions.selected {
+    /* XXX Probably unused? */
     background: var(--body-bg);
     border-top: 1px solid var(--body-bg);
     border-bottom: 1px solid #edecd6;

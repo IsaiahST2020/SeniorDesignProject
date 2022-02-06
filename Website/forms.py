@@ -3,12 +3,15 @@ from django import forms
 from .models import CustomUser
 from .models import Upload, FileUpload
 
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(max_length=150, required=True)
+
     class Meta:
         model = CustomUser
-        fields = ('email',"password1", "password2")
+        fields = ('email', "password1", "password2")
     # Clear the help text
+
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
 
@@ -31,7 +34,6 @@ class CustomUserChangeForm(UserChangeForm):
         fields = ('email',)
 
 
-
 class UploadForm(forms.ModelForm):
     class Meta:
         model = Upload
@@ -39,6 +41,7 @@ class UploadForm(forms.ModelForm):
             'title',
             'quantity'
         ]
+
     def clean_title(self, *args, **kwargs):
         title = self.cleaned_data.get("title")
         if "CFE" in title:
@@ -64,4 +67,5 @@ class FileForm(forms.ModelForm):
         if len(title) < 64:
             return title
         else:
-            raise forms.ValidationError("Title is over the 64 character limit!")
+            raise forms.ValidationError(
+                "Title is over the 64 character limit!")

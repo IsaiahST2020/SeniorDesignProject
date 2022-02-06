@@ -46,7 +46,7 @@ depends on core.js for utility functions like removeChildren or quickElement
         ],
         firstDayOfWeek: parseInt(get_format('FIRST_DAY_OF_WEEK')),
         isLeapYear: function(year) {
-            return (((year % 4) === 0) && ((year % 100) !== 0 ) || ((year % 400) === 0));
+            return (((year % 4) === 0) && ((year % 100) !== 0) || ((year % 400) === 0));
         },
         getDaysInMonth: function(month, year) {
             let days;
@@ -181,7 +181,7 @@ depends on core.js for utility functions like removeChildren or quickElement
             this.currentMonth = month;
             this.currentYear = year;
 
-            if(selected) {
+            if (selected) {
                 this.selected = selected;
             }
 

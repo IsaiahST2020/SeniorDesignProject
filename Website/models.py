@@ -14,6 +14,7 @@ class CustomUserManager(BaseUserManager):
     Custom user model manager where email is the unique identifiers
     for authentication instead of usernames.
     """
+
     def create_user(self, email, password, **extra_fields):
         """
         Create and save a User with the given email and password.
@@ -74,8 +75,10 @@ class FileUpload(models.Model):
 
     title = models.CharField(max_length=64)
     upload_time = models.DateTimeField(auto_now_add=True, blank=True)
-    file = models.FileField(upload_to="", validators=[file_size, FileExtensionValidator(allowed_extensions=['gcode'])])
-    upload_by = models.EmailField(max_length=75, unique=False, default='test@my.fit.com')
+    file = models.FileField(upload_to="", validators=[
+                            file_size, FileExtensionValidator(allowed_extensions=['gcode'])])
+    upload_by = models.EmailField(
+        max_length=75, unique=False, default='test@my.fit.com')
 
 
 # When Django receives signal to delete a FileUpload object, this will be called and delete the file from the filesystem

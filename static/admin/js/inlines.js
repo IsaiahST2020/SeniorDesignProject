@@ -333,15 +333,15 @@
             const data = $(this).data(),
                 inlineOptions = data.inlineFormset;
             let selector;
-            switch(data.inlineType) {
-            case "stacked":
-                selector = inlineOptions.name + "-group .inline-related";
-                $(selector).stackedFormset(selector, inlineOptions.options);
-                break;
-            case "tabular":
-                selector = inlineOptions.name + "-group .tabular.inline-related tbody:first > tr.form-row";
-                $(selector).tabularFormset(selector, inlineOptions.options);
-                break;
+            switch (data.inlineType) {
+                case "stacked":
+                    selector = inlineOptions.name + "-group .inline-related";
+                    $(selector).stackedFormset(selector, inlineOptions.options);
+                    break;
+                case "tabular":
+                    selector = inlineOptions.name + "-group .tabular.inline-related tbody:first > tr.form-row";
+                    $(selector).tabularFormset(selector, inlineOptions.options);
+                    break;
             }
         });
     });

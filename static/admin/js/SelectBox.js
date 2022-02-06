@@ -7,7 +7,7 @@
             SelectBox.cache[id] = [];
             const cache = SelectBox.cache[id];
             for (const node of box.options) {
-                cache.push({value: node.value, text: node.text, displayed: 1});
+                cache.push({ value: node.value, text: node.text, displayed: 1 });
             }
         },
         redisplay: function(id) {
@@ -53,7 +53,7 @@
             cache.splice(delete_index, 1);
         },
         add_to_cache: function(id, option) {
-            SelectBox.cache[id].push({value: option.value, text: option.text, displayed: 1});
+            SelectBox.cache[id].push({ value: option.value, text: option.text, displayed: 1 });
         },
         cache_contains: function(id, value) {
             // Check if an item is contained in the cache
@@ -69,7 +69,7 @@
             for (const option of from_box.options) {
                 const option_value = option.value;
                 if (option.selected && SelectBox.cache_contains(from, option_value)) {
-                    SelectBox.add_to_cache(to, {value: option_value, text: option.text, displayed: 1});
+                    SelectBox.add_to_cache(to, { value: option_value, text: option.text, displayed: 1 });
                     SelectBox.delete_from_cache(from, option_value);
                 }
             }
@@ -81,7 +81,7 @@
             for (const option of from_box.options) {
                 const option_value = option.value;
                 if (SelectBox.cache_contains(from, option_value)) {
-                    SelectBox.add_to_cache(to, {value: option_value, text: option.text, displayed: 1});
+                    SelectBox.add_to_cache(to, { value: option_value, text: option.text, displayed: 1 });
                     SelectBox.delete_from_cache(from, option_value);
                 }
             }
@@ -99,7 +99,7 @@
                     return -1;
                 }
                 return 0;
-            } );
+            });
         },
         select_all: function(id) {
             const box = document.getElementById(id);
