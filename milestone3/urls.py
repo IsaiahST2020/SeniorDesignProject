@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.conf.urls import include, url
+from django.urls import include, re_path
 from django.urls import path
 from Website.views import *
 from django.conf.urls.static import static
@@ -28,10 +28,10 @@ urlpatterns = [
     path('create/', upload_create_view, name="Create Upload"),
     path('login/', login_view, name="login"),
     path('register/', register_view, name="register"),
-    url(r"^accounts/", include("django.contrib.auth.urls")),
+    re_path(r"^accounts/", include("django.contrib.auth.urls")),
     path('upload/success/', success_view, name="success"),
     path('queue/', queue_view, name="queue"),
-    url(r"^delete_file/(?P<pk>[0-9]+)/$", delete_file, name="delete_file")
+    re_path(r"^delete_file/(?P<pk>[0-9]+)/$", delete_file, name="delete_file")
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
