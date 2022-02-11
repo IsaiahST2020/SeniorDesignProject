@@ -2,7 +2,24 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from octorest import OctoRest
 
+client = True
+
+def make_client():
+    global client
+    """
+    Creates and returns an instance of the OctoRest client.
+    Parameters:
+        url - the url to the octoprint server
+        apikey - the apikey from the octoprint server found in settings
+    """
+    url = "http://octopi.local"
+    apikey = "21BA190BCA9E49289245D9D0B36C9CE1"
+    try:
+        client = OctoRest(url=url, apikey=apikey)
+    except:
+        print("Warning -- connection to OctoprintAPI could not be established...")
 
 def main():
     """Run administrative tasks."""
@@ -19,4 +36,5 @@ def main():
 
 
 if __name__ == '__main__':
+    make_client()
     main()

@@ -6,6 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
+from manage import client
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -115,9 +116,32 @@ def queue_view(request, *args, **kwargs):
 	#queryset = FileUpload.objects.all()
 	if request.user.is_staff != True:
 		raise Http404()
+
+	#Grab queue objects
 	queryset = FileUpload.objects.all().order_by('upload_time')
+	
+	#Check printer status
+	if client:
+		status = "Nominal."
+		try:
+			state = client.printer()['state']
+
+			if state['flags']['printing']:
+				status = str(state['text']) + "/ Currently printing!"
+			else:
+				ready = state['flags']['ready']
+				if ready:
+					status = str(state['text']) + "/ Ready to print!"
+				else:
+					status = str(state['text']) + "/ Not ready to print!"
+		except:
+			status = "Client currently disconnected."
+	else:
+		status = "Not so nominal."
+
 	context = {
-		"object_list": queryset
+		"object_list": queryset,
+		"printer_status": status
 	}
 	if request.method == "POST":
 		print(request)

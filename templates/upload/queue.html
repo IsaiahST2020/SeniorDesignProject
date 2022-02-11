@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h2>
+Printer status: {{ printer_status }}
+</h2>
 
 <table id='fileQueue' class='table' cellspacing='0' width='100%'>
 	<thead>
@@ -10,6 +13,7 @@
 		<th>Uploaded By</th>
 		<th>Size(bytes)</th>
 		<th>Download File</th>
+    <th>Send to Printer</th>
 		<th>Process</th>
 	</tr>
 </thead>
@@ -21,6 +25,7 @@
 		<td>{{ download.file.size }}</td>
 		<td><a type="application/octet-stream" href="/uploads/{{ download.file }}" download>{{ download.title }}</a></td>
 		<!-- The following line will send a POST request to delete the file from the Queue -->
+    <td>Send?</td>
 		<td><form action="{% url 'delete_file' download.id %}" method="POST">{% csrf_token %}<input type="submit" value="Delete (for now)"></form></td>
 	</tr>
 	<!--
