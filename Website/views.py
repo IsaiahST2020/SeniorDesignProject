@@ -6,7 +6,8 @@ from django.contrib.auth.forms import AuthenticationForm
 from .forms import CustomUserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
-from manage import client
+from octorest import OctoRest
+from manage import make_client
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
@@ -109,10 +110,9 @@ def file_upload_view(request):
 def success_view(request, *args, **kwargs):
 	return render(request, "upload/success.html", {})
 
-
-
 # Create your views here.
 def queue_view(request, *args, **kwargs):
+	client = make_client()
 	#queryset = FileUpload.objects.all()
 	if request.user.is_staff != True:
 		raise Http404()
@@ -123,17 +123,19 @@ def queue_view(request, *args, **kwargs):
 	#Check printer status
 	if client:
 		status = "Nominal."
+		for k in client.files()['files']:
+			print(k['name'])
 		try:
 			state = client.printer()['state']
 
 			if state['flags']['printing']:
-				status = str(state['text']) + "/ Currently printing!"
+				status = str(state['text']) + " / Currently printing!"
 			else:
 				ready = state['flags']['ready']
 				if ready:
-					status = str(state['text']) + "/ Ready to print!"
+					status = str(state['text']) + " / Ready to print!"
 				else:
-					status = str(state['text']) + "/ Not ready to print!"
+					status = str(state['text']) + " / Not ready to print!"
 		except:
 			status = "Client currently disconnected."
 	else:

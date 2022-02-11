@@ -4,20 +4,19 @@ import os
 import sys
 from octorest import OctoRest
 
-client = True
-
 def make_client():
-    global client
     """
     Creates and returns an instance of the OctoRest client.
     Parameters:
         url - the url to the octoprint server
         apikey - the apikey from the octoprint server found in settings
     """
-    url = "http://octopi.local"
+    url = "http://192.168.1.208"
     apikey = "21BA190BCA9E49289245D9D0B36C9CE1"
     try:
         client = OctoRest(url=url, apikey=apikey)
+        print("Success -- connection to OctoprintAPI was established")
+        return client
     except:
         print("Warning -- connection to OctoprintAPI could not be established...")
 
@@ -36,5 +35,5 @@ def main():
 
 
 if __name__ == '__main__':
-    make_client()
+    client = make_client()
     main()
