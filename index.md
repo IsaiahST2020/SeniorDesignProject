@@ -39,7 +39,7 @@
 
 ## Milestone 4 (February 15th)
 * [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [Progress Evaluation](<Milestone4.pdf>)
 
 ## Milestone 5 (March 15th)
 * [Poster](google.com)
