@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  octoprint:
+    image: octoprint/octoprint
+    restart: unless-stopped
+    ports:
+      - 80:80
+    devices:
+      - /dev/USB0:/dev/USB0
+    volumes:
+      - octoprint:/octoprint
+
+volumes:
+  octoprint: {}
