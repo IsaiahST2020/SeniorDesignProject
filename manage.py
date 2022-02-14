@@ -15,10 +15,10 @@ def make_client():
     apikey = "21BA190BCA9E49289245D9D0B36C9CE1"
     try:
         client = OctoRest(url=url, apikey=apikey)
-        print("Success -- connection to OctoprintAPI was established")
+        print("\nSuccess -- connection to OctoprintAPI was established\n")
         return client
     except:
-        print("Warning -- connection to OctoprintAPI could not be established...")
+        print("\nWarning -- connection to OctoprintAPI could not be established...\n")
 
 def main():
     """Run administrative tasks."""
@@ -35,5 +35,4 @@ def main():
 
 
 if __name__ == '__main__':
-    client = make_client()
     main()
