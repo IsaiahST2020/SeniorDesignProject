@@ -38,7 +38,7 @@
 * [Presentation](<Semester 2 Project Plan Presentation.pdf>)
 
 ## Milestone 4 (February 15th)
-* [Presentation](google.com)
+* [Presentation](<Milestone_4_powerpoint.pdf>)
 * [Progress Evaluation](<Milestone4.pdf>)
 
 ## Milestone 5 (March 15th)
