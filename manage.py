@@ -12,9 +12,8 @@ def make_client():
         url - the url to the octoprint server
         apikey - the apikey from the octoprint server found in settings
     """
-    url = os.environ.get(r'OCTOPRINT_URL') or "http://192.168.1.208"
-    apikey = os.environ.get(
-        r'OCTOPRINT_APIKEY') or "21BA190BCA9E49289245D9D0B36C9CE1"
+    url = os.getenv(r'OCTOPRINT_URL', "http://192.168.1.208")
+    apikey = os.getenv(r'OCTOPRINT_APIKEY', "21BA190BCA9E49289245D9D0B36C9CE1")
     try:
         client = OctoRest(url=url, apikey=apikey)
         print("\nSuccess -- connection to OctoprintAPI was established\n")
