@@ -19,6 +19,10 @@ VOLUME [ "/app/data", "/app/uploads" ]
 # Exposing port
 EXPOSE 8000
 
+# Creating environment variables
+ENV OCTOPRINT_URL
+ENV OCTOPRINT_APIKEY
+
 # Ensure that the database is properly migrated
 RUN python3 manage.py migrate
 
