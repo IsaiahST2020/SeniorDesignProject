@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9@nnq=1ip8rhe55p-3st&o-b1lavos^y%u+jq+r_)-=b#=4@vd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = f"{os.getenv(r'ALLOWED_HOSTS') or ''}".split(",") + []
 
 # Set login redirection
 LOGIN_REDIRECT_URL = 'home'
