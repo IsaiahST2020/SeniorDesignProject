@@ -6,9 +6,9 @@ services:
         restart: unless-stopped
         ports:
             - 8080:80
-        devices:
-            - /dev/ttyAMA0:/dev/ttyAMA0
-            - /dev/ttyUSB0:/dev/ttyUSB69
+            # devices:
+            # - /dev/ttyAMA0:/dev/ttyAMA0
+            # - /dev/ttyUSB0:/dev/ttyUSB69
         volumes:
             - octoprint:/octoprint
     secureprinting:
@@ -16,13 +16,14 @@ services:
         image: secureprinting:local
         restart: unless-stopped
         ports:
-            - 80:8000
+            - 8000:8000
         volumes:
             - configs:/app/data
             - uploads:/app/uploads
         environment:
             - OCTOPRINT_URL=http://octoprint:80
             - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
+            - ALLOWED_HOSTS=${ALLOWED_HOSTS}
 
 volumes:
     octoprint: {}
