@@ -19,6 +19,9 @@ services:
         volumes:
             - configs:/app/data
             - uploads:/app/uploads
+        environment:
+            - OCTOPRINT_URL=http://octoprint:80
+            - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
 
 volumes:
     octoprint: {}
