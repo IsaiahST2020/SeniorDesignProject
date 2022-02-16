@@ -1,26 +1,26 @@
 version: '2.4'
 
 services:
-  octoprint:
-    image: octoprint/octoprint
-    restart: unless-stopped
-    ports:
-      - 80:80
-    devices:
-      - /dev/USB0:/dev/USB0
-    volumes:
-      - octoprint:/octoprint
-  secureprinting:
-    build: .
-    image: secureprinting:local
-    restart: unless-stopped
-    ports:
-      - 8080:8000
-    volumes:
-      - configs:/app/data
-      - uploads:/app/uploads
+    octoprint:
+        image: octoprint/octoprint
+        restart: unless-stopped
+        ports:
+            - 80:80
+        devices:
+            - /dev/USB0:/dev/USB0
+        volumes:
+            - octoprint:/octoprint
+    secureprinting:
+        build: .
+        image: secureprinting:local
+        restart: unless-stopped
+        ports:
+            - 8080:8000
+        volumes:
+            - configs:/app/data
+            - uploads:/app/uploads
 
 volumes:
-  octoprint: {}
-  configs: {}
-  uploads: {}
+    octoprint: {}
+    configs: {}
+    uploads: {}
