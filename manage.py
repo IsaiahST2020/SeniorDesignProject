@@ -4,6 +4,7 @@ import os
 import sys
 from octorest import OctoRest
 
+
 def make_client():
     """
     Creates and returns an instance of the OctoRest client.
@@ -11,14 +12,15 @@ def make_client():
         url - the url to the octoprint server
         apikey - the apikey from the octoprint server found in settings
     """
-    url = "http://192.168.1.208"
-    apikey = "21BA190BCA9E49289245D9D0B36C9CE1"
+    url = os.getenv(r'OCTOPRINT_URL', "http://192.168.1.208")
+    apikey = os.getenv(r'OCTOPRINT_APIKEY', "21BA190BCA9E49289245D9D0B36C9CE1")
     try:
         client = OctoRest(url=url, apikey=apikey)
         print("\nSuccess -- connection to OctoprintAPI was established\n")
         return client
     except:
         print("\nWarning -- connection to OctoprintAPI could not be established...\n")
+
 
 def main():
     """Run administrative tasks."""

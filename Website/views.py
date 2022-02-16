@@ -106,11 +106,14 @@ def file_upload_view(request):
 				obj.save()
 				loc = ""
 				new_name = ""
-				for filename, file in request.FILES.items():
-					new_name = request.FILES[filename].name
-				loc = new_name
-				uploaded_path = str(Path(__file__).resolve().parent.parent / "uploads" / new_name)
-				client.upload(file=uploaded_path)
+				if client:
+					for filename, file in request.FILES.items():
+						new_name = request.FILES[filename].name
+					loc = new_name
+					uploaded_path = str(Path(__file__).resolve().parent.parent / "uploads" / new_name)
+					client.upload(file=uploaded_path)
+				else:
+					print("Unable to upload file to octoprint. Client likely unavailable.")
 
 				return redirect('success/')
 			except ValueError as err:
@@ -131,10 +134,11 @@ def queue_view(request, *args, **kwargs):
 	#queryset = FileUpload.objects.all()
 	if request.user.is_staff != True:
 		raise Http404()
-
-	for x in client.files()['files']:
-		print(x['name'])
-
+	try:
+		for x in client.files()['files']:
+			print(x['name'])
+	except:
+		print("Unable to list printer files. Client likely unavailable.")
 	#Grab queue objects
 	queryset = FileUpload.objects.all().order_by('upload_time')
 	
@@ -177,13 +181,15 @@ def delete_file(request, pk):
 	if request.method == 'POST':
 		file = get_object_or_404(FileUpload, pk=pk)
 		new_name = file.file.name
-		file.delete()
 		name = new_name
 		try: 
 			client = make_client()
 			client.delete(location=name)
 		except:
 			print("Failure to delete from octoprint.")
+			return redirect('/queue')
+		file.delete()
+
 		return redirect('/queue')
 	else:
 		raise Http404()
