@@ -21,12 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9@nnq=1ip8rhe55p-3st&o-b1lavos^y%u+jq+r_)-=b#=4@vd'
+SECRET_KEY = os.getenv(
+    r'SECRET_KEY') or r'django-insecure-9@nnq=1ip8rhe55p-3st&o-b1lavos^y%u+jq+r_)-=b#=4@vd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = f"{os.getenv(r'ALLOWED_HOSTS') or ''}".split(",") + []
 
 # Set login redirection
 LOGIN_REDIRECT_URL = 'home'
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'milestone3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'data' / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'data' / 'db.sqlite3'),
     }
 }
 
@@ -129,10 +130,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    Path(str(BASE_DIR / "static")),
 ]
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')

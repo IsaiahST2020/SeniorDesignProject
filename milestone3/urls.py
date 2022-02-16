@@ -31,6 +31,8 @@ urlpatterns = [
     re_path(r"^accounts/", include("django.contrib.auth.urls")),
     path('upload/success/', success_view, name="success"),
     path('queue/', queue_view, name="queue"),
+    re_path(r"^start_print/(?P<pk>[0-9]+)/$", start_print, name="start_print"),
+    re_path(r"^pause_print/(?P<pk>[0-9]+)/$", pause_print, name="pause_print"),
     re_path(r"^delete_file/(?P<pk>[0-9]+)/$", delete_file, name="delete_file")
 ]
 

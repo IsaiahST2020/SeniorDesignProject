@@ -29,16 +29,25 @@ $ pipenv install
 ### Installing dependencies + development libraries
 This includes things like `pylint` and `autopep8` to help keep formatting and documentation consistent.
 ```bash
+
 pipenv install --dev
 ```
 ## Running the application
-if you want to run the server using the virtual environment provided by pipenv, you can run one of the following
+if you want to run the server using the virtual environment provided by pipenv you can follow these steps on a fresh install
 ```bash
-pipenv run python manage.py runserver
-```
-or
-```bash
-pipenv run runserver
+pipenv uninstall --all
+pipenv install --dev
+pipenv shell
+sudo python3 -m pip install -r requirements.txt
+pip freeze
+mkdir data
+cd data
+touch db.sqlite3
+cd ..
+sudo python3 manage.py makemigrations
+sudo python3 manage.py migrate
+sudo python3 manage.py createsuperuser
+sudo python3 manage.py runserver
 ```
 or
 ```bash
