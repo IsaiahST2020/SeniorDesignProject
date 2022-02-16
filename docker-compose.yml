@@ -23,6 +23,8 @@ services:
         environment:
             - OCTOPRINT_URL=http://octoprint:80
             - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
+            - SECRET_KEY=${SECRET_KEY}
+            - ALLOWED_HOSTS=${ALLOWED_HOSTS}
 
 volumes:
     octoprint: {}
