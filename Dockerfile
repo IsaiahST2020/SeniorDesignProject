@@ -16,6 +16,7 @@ ENV OCTOPRINT_URL=http://0.0.0.0:80
 ENV OCTOPRINT_APIKEY=ABCD1234
 
 # Installing required libraries
+RUN apk add gcc libffi-dev libc-dev
 COPY requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
 
@@ -29,10 +30,7 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # Mounting spaces with data we prefer to keep
-VOLUME [ "/app/data", "/app/uploads" ]
-
-# Ensure that the database is properly migrated
-RUN python3 manage.py migrate
+VOLUME [ "/app/data", "/app/uploads", "/app/cert" ]
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000" ]
+CMD [ "python3", "manage.py", "runserver_plus", "--cert-file", "cert/cert.pem", "--key-file", "cert/key.pem", "0.0.0.0:8000" ]
