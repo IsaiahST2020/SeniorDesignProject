@@ -1,4 +1,4 @@
-version: '2.4'
+version: '3.4'
 
 services:
     octoprint:
@@ -11,9 +11,15 @@ services:
             - /dev/ttyUSB0:/dev/ttyUSB69
         volumes:
             - octoprint:/octoprint
+        networks:
+            - secureprinting
+
     secureprinting:
-        build: .
-        image: secureprinting:local
+        image: secureprinting
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        env_file: .env
         restart: unless-stopped
         ports:
             - 80:8000
@@ -25,8 +31,13 @@ services:
             - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
             - SECRET_KEY=${SECRET_KEY}
             - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+        networks:
+            - secureprinting
 
 volumes:
     octoprint: {}
     configs: {}
     uploads: {}
+
+networks:
+    secureprinting: {}
