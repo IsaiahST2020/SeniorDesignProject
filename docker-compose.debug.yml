@@ -37,6 +37,7 @@ services:
             - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
             - SECRET_KEY=${SECRET_KEY}
             - ALLOWED_HOSTS=${ALLOWED_HOSTS}
+            - HTTPS=${HTTPS:-on}
         networks:
             - secureprinting
 
