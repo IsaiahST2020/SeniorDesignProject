@@ -6,6 +6,9 @@ name = "pypi"
 [packages]
 Django = "*"
 octorest = "*"
+pyopenssl = "*"
+django-extensions = "*"
+werkzeug = "*"
 
 [dev-packages]
 pylint = "*"
