@@ -16,10 +16,12 @@ ENV OCTOPRINT_URL=http://0.0.0.0:80
 ENV OCTOPRINT_APIKEY=ABCD1234
 
 # Installing required libraries
+RUN apk add gcc libffi-dev libc-dev cargo libressl-dev
 COPY requirements.txt /app/requirements.txt
-RUN apk add gcc libffi-dev libc-dev cargo libressl-dev && \
-    pip install -r /app/requirements.txt && \
-    apk del gcc libffi-dev libc-dev cargo libressl-dev
+RUN pip install -r /app/requirements.txt
+
+# Removing alpine packages that are no longer needed
+RUN apk del gcc libffi-dev libc-dev cargo libressl-dev
 
 # The directory for our code will be in /app
 WORKDIR /app
