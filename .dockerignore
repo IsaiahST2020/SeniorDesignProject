@@ -1,6 +1,5 @@
 # Personal data ignore
 uploads
-cert
 db.sqlite3
 
 # Ignore python compile files
