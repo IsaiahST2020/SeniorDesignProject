@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
     # My apps
     'Website',
-    'django_extensions'
 ]
 
 MIDDLEWARE = [
@@ -143,9 +142,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# Ensuring particular items are secure
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_SECURE = True
