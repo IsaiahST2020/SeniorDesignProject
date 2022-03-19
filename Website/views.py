@@ -229,6 +229,19 @@ def pause_print(request, pk):
     else:
         raise Http404()
 
+def view_gcode(request, pk):
+	# Ensure priviledged user
+	if request.user.is_staff != True:
+		raise Http404()
+	if request.method == 'GET':
+		file = get_object_or_404(FileUpload, pk=pk)
+		context = {
+			'file': file
+		}
+		return render(request, "view_gcode.html", context)
+	else:
+		raise Http404()
+
 # def upload_create_view(request):
 # 	my_form = RawUploadForm()
 # 	if request.method == "POST":
