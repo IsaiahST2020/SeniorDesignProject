@@ -42,10 +42,10 @@
 * [Progress Evaluation](<Milestone4.pdf>)
 
 ## Milestone 5 (March 15th)
-* [Poster](google.com)
+* [Poster](<poster.pdf>)
 * [e-book page](<ebook.pdf>)
-* [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [Presentation](<Milestone_5_powerpoint.pdf>)
+* [Progress Evaluation](<Milestone5.pdf>)
 
 ## Milestone 6 (April 21st)
 * [User and/or Developer Manual](google.com)
