@@ -43,7 +43,7 @@
 
 ## Milestone 5 (March 15th)
 * [Poster](google.com)
-* [e-book page](<Showcase2022_Ebook_CS_SECUREANDREMOTE3DPRINTING.docx>)
+* [e-book page](<ebook.pdf>)
 * [Presentation](google.com)
 * [Progress Evaluation](google.com)
 
