@@ -2,6 +2,9 @@
 uploads
 db.sqlite3
 
+# Nginx container data
+nginx
+
 # Ignore python compile files
 __pycache__
 *.pyc

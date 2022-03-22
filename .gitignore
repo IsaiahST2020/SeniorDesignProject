@@ -2,6 +2,12 @@
 uploads
 db.sqlite3
 
+# Nginx data
+ssl_password.txt
+*.pem
+*.crt
+*.key
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
