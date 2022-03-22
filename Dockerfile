@@ -17,9 +17,7 @@ ENV OCTOPRINT_APIKEY=ABCD1234
 
 # Installing required libraries
 COPY requirements.txt /app/requirements.txt
-RUN apk add gcc libffi-dev libc-dev cargo libressl-dev && \
-    pip install -r /app/requirements.txt && \
-    apk del gcc libffi-dev libc-dev cargo libressl-dev
+RUN pip install -r /app/requirements.txt
 
 # The directory for our code will be in /app
 WORKDIR /app
@@ -31,7 +29,10 @@ RUN adduser -u 5678 --disabled-password --gecos "" appuser && chown -R appuser /
 USER appuser
 
 # Mounting spaces with data we prefer to keep
-VOLUME [ "/app/data", "/app/uploads", "/app/cert" ]
+VOLUME [ "/app/data", "/app/uploads" ]
+
+# Ensure that the database is properly migrated
+RUN python3 manage.py migrate
 
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
-CMD [ "python3", "manage.py", "runserver_plus", "--cert-file", "cert/cert.pem", "--key-file", "cert/key.pem", "0.0.0.0:8000" ]
+CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000" ]

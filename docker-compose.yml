@@ -19,19 +19,18 @@ services:
         build:
             context: .
             dockerfile: ./Dockerfile
+        env_file: .env
         restart: unless-stopped
         ports:
-            - 443:8000
+            - 80:8000
         volumes:
             - configs:/app/data
-            - certs:/app/cert
             - uploads:/app/uploads
         environment:
             - OCTOPRINT_URL=http://octoprint:80
             - OCTOPRINT_APIKEY=${OCTOPRINT_APIKEY}
             - SECRET_KEY=${SECRET_KEY}
             - ALLOWED_HOSTS=${ALLOWED_HOSTS}
-            - HTTPS=${HTTPS:-on}
         networks:
             - secureprinting
 
@@ -39,7 +38,6 @@ volumes:
     octoprint: {}
     configs: {}
     uploads: {}
-    certs: {}
 
 networks:
     secureprinting: {}
