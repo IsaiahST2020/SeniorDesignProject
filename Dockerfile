@@ -31,8 +31,5 @@ USER appuser
 # Mounting spaces with data we prefer to keep
 VOLUME [ "/app/data", "/app/uploads" ]
 
-# Ensure that the database is properly migrated
-RUN python3 manage.py migrate
-
 # During debugging, this entry point will be overridden. For more information, please refer to https://aka.ms/vscode-docker-python-debug
 CMD [ "python3", "manage.py", "runserver", "0.0.0.0:8000" ]
