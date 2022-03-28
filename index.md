@@ -42,8 +42,8 @@
 * [Progress Evaluation](<Milestone4.pdf>)
 
 ## Milestone 5 (March 15th)
-* [Poster](<poster.pdf>)
-* [e-book page](<ebook.pdf>)
+* [Poster](<SHOWCASE_SPRING2022_POSTER_CS_SECURE&REMOTE3DPRINTING.pdf>)
+* [e-book page](<Showcase2022_Ebook_CS_SECUREANDREMOTE3DPRINTING.pdf>)
 * [Presentation](<Milestone_5_powerpoint.pdf>)
 * [Progress Evaluation](<Milestone5.pdf>)
 
