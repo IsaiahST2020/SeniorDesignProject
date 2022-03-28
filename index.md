@@ -45,7 +45,7 @@
 * [Poster](<SHOWCASE_SPRING2022_POSTER_CS_SECURE&REMOTE3DPRINTING.pdf>)
 * [e-book page](<Showcase2022_Ebook_CS_SECUREANDREMOTE3DPRINTING.pdf>)
 * [Presentation](<Milestone_5_powerpoint.pdf>)
-* [Progress Evaluation](<Milestone5.pdf>)
+* [Progress Evaluation](<milestone5.pdf>)
 
 ## Milestone 6 (April 21st)
 * [User and/or Developer Manual](google.com)
