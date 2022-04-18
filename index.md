@@ -48,10 +48,10 @@
 * [Progress Evaluation](<milestone5.pdf>)
 
 ## Milestone 6 (April 21st)
-* [User and/or Developer Manual](google.com)
-* [Demo Video](google.com)
-* [Presentation](google.com)
-* [Progress Evaluation](google.com)
+* [User and/or Developer Manual](User_Dev_Manual.pdf)
+* [Demo Video](https://www.youtube.com/watch?v=DMiGOmgc9O4&t=1s)
+* [Presentation](Milestone6.pdf)
+* [Progress Evaluation](Milestone_6_power.pdf)
 
 ### Website Maintenance
 You can use the [editor on GitHub](https://github.com/IsaiahST2020/SeniorDesignProject/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
